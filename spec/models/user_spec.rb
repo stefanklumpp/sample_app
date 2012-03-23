@@ -15,9 +15,7 @@ require 'spec_helper'
 describe User do
 
   before do
-    before do
-      @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
-    end
+    @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
   end
 
   subject { @user }
@@ -95,6 +93,11 @@ describe User do
   describe "when password confirmation is nil" do
     before { @user.password_confirmation = nil }
     it { should_not be_valid }
+  end
+
+  describe "with a password that's too short" do
+    before { @user.password = @user.password_confirmation = "a" * 5 }
+    it { should be_invalid }
   end
 
   describe "return value of authenticate method" do
