@@ -124,4 +124,7 @@ describe User do
     its(:remember_token) { should_not be_blank }
   end
 
+
+
+
 end

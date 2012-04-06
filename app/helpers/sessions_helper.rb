@@ -18,6 +18,11 @@ module SessionsHelper
     @current_user ||= user_from_remember_token
   end
 
+  def current_user?(user)
+    user == current_user
+  end
+
+
   private
 
   def user_from_remember_token
