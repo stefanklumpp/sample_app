@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.3'
 gem 'bootstrap-sass', "~> 2.0.1"
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
@@ -9,7 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.5'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
-  gem 'rspec-rails', '2.8.1'
+  gem 'rspec-rails', '2.9.0'
   gem 'annotate', '~> 2.4.1.beta'
 end
 
