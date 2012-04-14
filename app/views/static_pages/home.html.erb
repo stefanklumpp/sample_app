@@ -5,7 +5,10 @@
           <%= render 'shared/user_info' %>
         </section>
         <section>
-          <%= render :partial => "shared/micropost_form", :locals => { :micropost => @micropost } %>
+          <%= render 'shared/stats' %>
+        </section>
+        <section>
+          <%= render 'shared/micropost_form' %>
         </section>
       </aside>
       <div class="span8">
